@@ -2,6 +2,18 @@
 
 This project contains the Symboliseur42 ERC20 token contract built with Hardhat. The token uses OpenZeppelin's ERC20 implementation and can be deployed on Ethereum testnets like Sepolia.
 
+## Technical Choices & Rationale
+1. Blockchain: Ethereum Sepolia Testnet
+Why Ethereum? Most widely-used EVM chain, mature ERC-20 ecosystem, best documentation/tools.​
+
+Why Sepolia? Official Ethereum testnet, no real funds needed, reliable faucets, Etherscan support. Avoids BSC/Base complexity for minimal project.
+
+2. Standard: ERC-20 (OpenZeppelin)
+Why ERC-20? Industry standard, wallet/DEX compatible (transfer, approve, transferFrom). Required by project ("ERC20 for ETH").​
+
+Why OpenZeppelin? Battle-tested, audited, handles edge cases (overflows, zero-address). Minimal custom code = maximum security.​
+
+
 ## Contract Details
 
 - **Name**: symboliseur42
@@ -33,13 +45,6 @@ npx hardhat compile
 
 ```shell
 npx hardhat ignition deploy ignition/modules/Lock.js --network sepolia
-```
-
-## Available Commands
-
-```shell
-npx hardhat help                    # Show help
-npx hardhat compile                 # Compile contracts
 ```
 
 ## Sepolia Testnet Information
